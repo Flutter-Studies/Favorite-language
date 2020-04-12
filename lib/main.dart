@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
+main() => runApp(PerguntaApp());
 
-main() => runApp(new PerguntaApp());
+
+class PerguntaApp extends StatefulWidget {
+
+  PerguntaAppState createState() {  
+    return PerguntaAppState();
+  }
+}
 
 
-class PerguntaApp extends StatelessWidget {
-
+class PerguntaAppState extends State<PerguntaApp> {
   final pergunta = 'Qual a sua linguagem de programação preferida?';
 
   final List<String> opcoes = [
@@ -70,5 +76,5 @@ class PerguntaApp extends StatelessWidget {
         ),
       ),
     ); 
-  } 
+  }
 }
