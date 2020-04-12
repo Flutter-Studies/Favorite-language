@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './questao.dart';
 import './resposta.dart';
+import './questionario.dart';
 
 main() => runApp(PerguntaApp());
 
@@ -11,14 +12,7 @@ class PerguntaApp extends StatefulWidget {
   }
 }
 
-
 class PerguntaAppState extends State<PerguntaApp> {
-  final pergunta = 'Qual a sua linguagem de programação preferida?';
-
-  final List<String> opcoes = [
-    'Java', 'JavaScript', 'Python', 'PHP', 'Outro'
-  ];
-
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +25,13 @@ class PerguntaAppState extends State<PerguntaApp> {
         ),
         body: Column(
           children: <Widget>[
-            Questao(pergunta),
+            Questao(new Questionario().texto),
 
-            Resposta(opcoes[0]),
-            Resposta(opcoes[1]),
-            Resposta(opcoes[2]),
-            Resposta(opcoes[3]),
-            Resposta(opcoes[4]),
+            Resposta(new Questionario().opcoes[0], new Questionario().resposta[0]),
+            Resposta(new Questionario().opcoes[1], new Questionario().resposta[1]),
+            Resposta(new Questionario().opcoes[2], new Questionario().resposta[2]),
+            Resposta(new Questionario().opcoes[3], new Questionario().resposta[3]),
+            Resposta(new Questionario().opcoes[4], new Questionario().resposta[4]),
 
           ],
         ),
