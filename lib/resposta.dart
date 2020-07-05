@@ -9,12 +9,34 @@ class Resposta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      textColor: Colors.white,
-      color: Colors.blue,        
-      child: Text(this.linguagem),
-      onPressed: () => print(this.resposta),
-              
-    );   
+    
+    return Container( 
+
+      margin: EdgeInsets.all(10.0),
+
+      child: ButtonTheme(
+        
+        minWidth: 150.0,
+        height: 40.0,
+        
+        child: RaisedButton(
+          
+          textColor: Colors.white,
+          color: Colors.blue,        
+          
+          child: Text(
+            
+            this.linguagem,
+            style: TextStyle(
+
+              fontSize: 20
+            ),
+            
+            ),
+          onPressed: () => print(this.resposta),
+
+        ),
+      ),
+    );
   }
 }
