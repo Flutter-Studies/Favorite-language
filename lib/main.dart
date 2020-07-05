@@ -21,8 +21,16 @@ class PerguntaAppState extends State<PerguntaApp> {
       home: Scaffold(
         
         appBar: AppBar(
-          title: Text('Perguntas'),
+          backgroundColor: Colors.green,
+          title: Text(
+            
+            'Questionario',
+            textAlign: TextAlign.center,
+
+          ),
+
         ),
+
         body: Column(
           children: <Widget>[
             Questao(new Questionario().texto),
